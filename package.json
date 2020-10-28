@@ -17,9 +17,10 @@
     "url": "https://github.com/jlovejo2/MultiMath/issues"
   },
   "homepage": "https://github.com/jlovejo2/MultiMath#readme",
-  "dependencies": {
-    "webpack": "^5.3.0",
-    "webpack-cli": "^4.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }
 }
