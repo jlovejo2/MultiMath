@@ -1,14 +1,14 @@
 function startGame() {
     //starting a new game
 
-    const playerName: string = 'Audrey'
+    const playerName: string | undefined = getInputValue('playername')
     logPlayer(playerName);
 
-    let messagesElement = document.getElementById('messages');
-    messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';
+    postScore(100)
+
 }
 
-function logPlayer (name: string): void {
+function logPlayer (name: string = 'MultiMath Player'): void {
     console.log(`New game starting for player ${name}`);
 }
 
@@ -20,6 +20,11 @@ function getInputValue (elementID: string): string | undefined {
     } else {
         return inputElement.value
     }
+}
+
+function postScore(score: number, playerName: string = 'MultiMath Player'): void {
+    const scoreElement: HTMLElement | null = document.getElementById('postedScores');
+    scoreElement!.innerText = `${score} - ${playerName}`
 }
 
 document.getElementById('startGame')!.addEventListener('click', startGame);
