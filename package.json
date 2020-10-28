@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jlovejo2/MultiMath#readme",
   "dependencies": {},
   "devDependencies": {
+    "ts-loader": "^8.0.7",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
