@@ -28,6 +28,30 @@ class Game {
     //enable calculate button
     document.getElementById('calculate')!.removeAttribute('disabled');
     }
+
+    calculateScore(): void {
+        let score: number = 0;
+
+        for (let i=1; i <= this.problemCount; i++) {
+            const answer: number = Number(Utility.getInputValue('answer' + i)) 
+            if (i * this.factor === answer ){
+                score++;
+            }
+        }
+
+        //create a new result obj to pass to scoreboard
+        const result: Result = {
+            playerName: this.player.name,
+            score: score,
+            problemCount: this.problemCount,
+            factor: this.factor
+        };
+
+        this.scoreboard.addResult(result)
+        this.scoreboard.updateScoreboard();
+
+        document.getElementById('calculate')!.setAttribute('disabled', 'true')
+    }
 }
 
 
