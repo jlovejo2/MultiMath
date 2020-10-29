@@ -27,7 +27,7 @@ class Game {
 
     //enable calculate button
     document.getElementById('calculate')!.removeAttribute('disabled');
-}
+    }
 }
 
 

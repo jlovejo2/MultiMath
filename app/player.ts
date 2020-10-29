@@ -1,15 +1,9 @@
 /// <reference path="person.ts" />
 
 class Player implements Person {
-    name: string;
-    age?: number;
-    highScore: number;
 
-    constructor() {
+    constructor(public name: string, public highScore: number, public age?: number ) {
 
-        this.name = '';
-        this.highScore = 0;
-        
     }
 
     formatName () {
