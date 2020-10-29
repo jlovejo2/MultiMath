@@ -1,7 +1,6 @@
-/// <reference path="person.ts" />
+import { Person } from './person';
 
-
-class Player implements Person {
+export class Player implements Person {
 
     constructor(public name: string, public age?: number, public highScore?: number) {
 
