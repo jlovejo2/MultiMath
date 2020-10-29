@@ -3,7 +3,7 @@
     "compilerOptions": {
         "removeComments": true
     },
-    "include": [
-        "./**/*"
+    "files": [
+        "./app.ts"
     ]
 }
