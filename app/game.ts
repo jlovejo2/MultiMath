@@ -22,8 +22,8 @@ class Game {
         }
 
     //add a new game to the page
-    const gameElement: HTMLElement = document.getElementById('game')
-    gameElement.innerHTML = gameForm;
+    const gameElement: HTMLElement | null = document.getElementById('game')
+    gameElement!.innerHTML = gameForm;
 
     //enable calculate button
     document.getElementById('calculate')!.removeAttribute('disabled');
